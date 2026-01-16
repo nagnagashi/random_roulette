@@ -1,0 +1,142 @@
+body {
+    background-color: #fdfcf0;
+    /* 優しいクリーム色 */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #555;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    padding: 20px;
+    gap: 30px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.main-content {
+    flex: 2;
+    text-align: center;
+}
+
+h1 {
+    color: #ffb7b2;
+}
+
+/* 入力・ボタン */
+.input-area {
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    border: 2px solid #b2e2f2;
+    border-radius: 5px;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+    margin: 5px;
+}
+
+#addButton {
+    background-color: #b2e2f2;
+}
+
+#startButton {
+    background-color: #b2f2bb;
+}
+
+#stopButton {
+    background-color: #f2b2b2;
+}
+
+#clearAllButton {
+    background-color: #ddd;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ルーレット本体 */
+.roulette-wrapper {
+    position: relative;
+    display: inline-block;
+    margin: 20px 0;
+}
+
+.pointer {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    color: #ff6f61;
+    z-index: 10;
+}
+
+canvas {
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 結果表示 */
+.result-display {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff9aa2;
+    height: 3rem;
+    margin: 10px 0;
+}
+
+/* リスト表示 */
+.sidebar {
+    flex: 1;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+ul,
+ol {
+    list-style-position: inside;
+    padding: 0;
+}
+
+li {
+    margin: 5px 0;
+    padding: 5px;
+    background: #f9f9f9;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.del-btn {
+    background: #ffb7b2;
+    padding: 2px 8px;
+    font-size: 12px;
+}
+
+#clearHistoryButton {
+    background-color: #ddd;
+    color: #555;
+    padding: 5px;
+    font-size: 0.8rem;
+}
+
+#clearHistoryButton:hover {
+    background-color: #ccc;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>パステル・ルーレット</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main-content">
+            <h1>多数決ルーレット</h1>
+
+            <div class="input-area">
+                <input type="text" id="itemInput" placeholder="項目を入力してください">
+                <button id="addButton">追加</button>
+            </div>
+
+            <div class="roulette-wrapper">
+                <canvas id="rouletteCanvas" width="400" height="400"></canvas>
+                <div class="pointer">▼</div>
+            </div>
+
+            <div class="controls">
+                <button id="startButton">スタート</button>
+                <button id="stopButton" disabled>ストップ</button>
+                <button id="clearAllButton">すべてクリア</button>
+            </div>
+
+            <div id="resultDisplay" class="result-display"></div>
+
+            <div class="list-section">
+                <h3>現在の項目リスト</h3>
+                <ul id="itemList"></ul>
+            </div>
+
+        </div>
+
+        <div class="sidebar">
+            <h3>決定した順番</h3>
+            <button id="clearHistoryButton" class="del-btn" style="width: 100%; margin-bottom: 10px;">履歴削除</button>
+            <ol id="historyList"></ol>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
